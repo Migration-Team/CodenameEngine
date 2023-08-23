@@ -70,6 +70,7 @@ jobs:
           haxelib install hxjsonast
           haxelib install hscript
           haxelib install format
+          haxelib git hscript-improved https://github.com/Erizur/hscript-improved.git
           haxelib git hxCodec https://github.com/SPLCoding/hxCodec-but-it-works-xd.git
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
