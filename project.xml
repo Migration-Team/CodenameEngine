@@ -40,7 +40,7 @@
 	<window if="mac" allow-high-dpi="true" />
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
+	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false"/>
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
@@ -116,7 +116,7 @@
 	<define name="SYS" if="desktop"/>
 
 	<!-- Comment this out to disable Discord RPC !-->
-	<define name="DISCORD_RPC" unless="web || hl || neko"/>
+	<define name="DISCORD_RPC" unless="web || hl || neko || android"/>
 
 	<!-- Comment this out to disable GitHub API integration !-->
 	<define name="GITHUB_API" unless="web || hl"/>
@@ -136,7 +136,7 @@
 	<haxedef name="TITLESCREEN_XML" />
 
 	<!-- Comment this out to disable mods folder !-->
-	<haxedef name="MOD_SUPPORT" unless="web"/>
+	<haxedef name="MOD_SUPPORT" unless="web || android"/>
 
 	<!-- Comment this out to disable global scripts !-->
 	<haxedef name="GLOBAL_SCRIPT" />
@@ -157,7 +157,7 @@
 	<define name="THREE_D_SUPPORT" />
 
 	<!-- Comment this out to disable video cutscene support, in case of compilation errors. !-->
-	<define name="VIDEO_CUTSCENES" unless="web || linux || hl" />
+	<define name="VIDEO_CUTSCENES" unless="web || linux || hl || android" />
 
 	<!-- Comment this out to disable commit number on FPS -->
 	<define name="SHOW_BUILD_ON_FPS" />
@@ -209,4 +209,11 @@
 	<haxedef name="HXCPP_STACK_LINE" if="release" />
 	<haxedef name="HXCPP_DEBUG_LINK" if="release" />
 	<haxedef name="hscriptPos" /> <!-- for logging -->
+
+	<!-- _________________________________ Android Stuff _______________________________ -->
+	<config:android permission="android.permission.READ_EXTERNAL_STORAGE" if="android"/>
+	<config:android permission="android.permission.WRITE_EXTERNAL_STORAGE" if="android"/>
+  <config:android gradle-version="7.5.1" />
+  <config:android gradle-plugin="7.3.1" />
+
 </project>
