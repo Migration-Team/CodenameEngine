@@ -2,7 +2,7 @@ package funkin.backend.utils;
 
 import flixel.tweens.FlxTween;
 import flixel.system.frontEnds.SoundFrontEnd;
-import openfl.media.Sound;
+import flixel.sound.FlxSound;
 import funkin.backend.system.Conductor;
 import flixel.sound.FlxSoundGroup;
 import haxe.Json;
