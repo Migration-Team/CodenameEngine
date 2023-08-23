@@ -11,6 +11,7 @@ import flixel.FlxBasic;
 import flixel.math.FlxPoint;
 import flixel.system.FlxAssets.FlxSoundAsset;
 import flixel.util.FlxStringUtil;
+import flixel.tweens.FlxTween;
 
 #if (flixel >= "5.3.0")
 import flixel.sound.FlxSoundGroup;
